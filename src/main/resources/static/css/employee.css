@@ -1,0 +1,36 @@
+body{
+    background-color: whitesmoke;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.text-center .btn-primary{
+    justify-content: center;
+    background-color: black;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.text-center .btn-primary:hover {
+    background-color: #4ba493;
+}
+
+.container .row .card{
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: fit-content;
+    background-color: #fff;
+}
+
+.nav-item:hover{
+    background-color: #52b09e;
+    border-radius: 12px;
+}

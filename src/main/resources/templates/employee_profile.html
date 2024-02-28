@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link th:href="@{~/css/employee.css}" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md"
+     style="background-color: #4ba493;">    <!-- Brand -->
+    <a class="navbar-brand" href="#">
+        <img src="/img/logosmall.png" height="60px" width="60px" alt="">
+    </a>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link"style="color: white;" th:href="@{/employee}">Back</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{~/logout}"
+                   onclick="if (!(confirm('Are you sure you want to Logout?'))) return false"
+                   style="color: white">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+<div class = "container">
+    <!--        box form with heading css-->
+    <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card"  style="padding: 30px">
+        <h3 class = "top"style="text-align: center; color: #4ba493" ><b>Employee Profile</b></h3>
+        <form>
+            <div class="row">
+                <div class="card-body" style="text-align: center">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="card-title"><b>First Name</b></label>
+                            <p class="card-text"
+                               th:text="${employee.firstName}" readonly >
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="card-title"><b>Last Name</b></label>
+                            <p class="card-text"
+                               th:text="${employee.lastName}" readonly >
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="card-title"><b>Email</b></label>
+                            <p class="card-text"
+                               th:text="${employee.email}" readonly >
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="card-title"><b>Phone Number</b></label>
+                                <p class="card-text"
+                                   th:text="${employee.phone_number}" readonly >
+                                </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="card-title"><b>Department</b></label>
+                            <p class="card-text"
+                               th:text="${employee.department}" readonly >
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="card-title"><b>Salary</b></label>
+                            <p class="card-text"
+                               th:text="${employee.salary}" readonly >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
